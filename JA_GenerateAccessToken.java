@@ -60,6 +60,7 @@ public class JA_GenerateAccessToken extends CustomJavaAction<java.lang.String>
 					try {
 						credentialFileInputStream.close();
 					} catch (IOException e) {
+						throw new RuntimeException("Error closing credentialFileInputStream", e);
 					}
 				}
 			}
